@@ -8,6 +8,13 @@ const NewJobForm = ({ onAddJob }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    
+    if (!title || !company || !location || !type) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
     const newJob = { title, company, location, type };
 
     fetch('http://localhost:8000/jobs', {
@@ -20,6 +27,7 @@ const NewJobForm = ({ onAddJob }) => {
       .then((r) => r.json())
       .then((data) => {
         onAddJob(data);
+        
         setTitle('');
         setCompany('');
         setLocation('');

@@ -18,7 +18,7 @@ const JobBoard = () => {
       });
   }, []);
 
-  // 🔹 Handle search
+
   const handleSearch = (query) => {
     setSearchQuery(query);
     const filtered = query
@@ -27,7 +27,7 @@ const JobBoard = () => {
     setFilteredJobs(filtered);
   };
 
-  // 🔹 Add new job
+  
   const handleAddJob = (newJob) => {
     setJobs(prev => [...prev, newJob]);
     setFilteredJobs(prev => [...prev, newJob]);
