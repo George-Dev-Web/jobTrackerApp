@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Login from './pages/Login';
 
-const apiKey = import.meta.env.VITE_API_KEY; // Vite
+const apiKey = import.meta.env.VITE_API_KEY;
 
 
 const API_URL = "https://www.themuse.com/api/public/jobs?page=1";
 function App() {
-  const [count, setCount] = useState(0)
   const [jobs, setJobs] = useState([])
   useEffect(()=>{
     fetch(API_URL)
@@ -17,7 +14,7 @@ function App() {
   },[])
   return (
     <>
-     {jobs[0].contents}
+      <Login/>
     </>
   )
 }
