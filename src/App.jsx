@@ -14,7 +14,7 @@ function App() {
   },[])
   return (
     <>
-      <Login/>
+      <h1>Home page</h1>
     </>
   )
 }

@@ -1,5 +1,18 @@
 {
-    "users":[],
-    "applications": [],
-    "messages": []
+  "users": [
+    {
+      "id": "9dd6c3e3-ac83-43b0-9a77-5007239f4208",
+      "name": "frank",
+      "email": "frank@frank.com",
+      "phone": "+254745411366",
+      "js": true,
+      "html": true,
+      "css": true,
+      "python": false,
+      "linkedin": "https://www.linkedin.com/in/frankincense-wesley/",
+      "password": "1234"
+    }
+  ],
+  "applications": [],
+  "messages": []
 }
