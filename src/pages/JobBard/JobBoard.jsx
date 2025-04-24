@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import JobList from './JobList';
+import JobList from './JobListing';
 import SearchBar from './SearchBar';
 
 const JobBoard = () => {

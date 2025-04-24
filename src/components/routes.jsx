@@ -1,13 +1,50 @@
-import { Children } from "react";
 import App from "../App";
+import ErrorPage from "../pages/ErrorPage";
+import JobBoard from "../pages/JobBard/JobBoard";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import ProtectedRoutes from "./ProtectedRoutes";
+
 
 export const routes =[ 
     {
         path: "/",
-        element: <App/>,
+        element: <ProtectedRoutes/>,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: "/",
+                element: <App/>,
+                children: [
+
+                ]
+            },
+            {
+                path: "/job-listing",
+                element: <JobBoard/>,
+                children: [
+        
+                ]
+            },
+            
+        ]
+    },
+    
+    {
+        path: "/login",
+        element: <Login/>,
         errorElement: <ErrorPage />,
         children: [
 
         ]
-    }
+    },
+    {
+        path: "/register",
+        element: <Register/>,
+        errorElement: <ErrorPage />,
+        children: [
+
+        ]
+    },
+
 ]
