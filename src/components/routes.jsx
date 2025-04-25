@@ -16,16 +16,17 @@ export const routes =[
                 path: "/",
                 element: <App/>,
                 children: [
+                    {
+                        path: "/job-listing",
+                        element: <JobBoard/>,
+                        children: [
+                
+                        ]
+                    },
 
                 ]
             },
-            {
-                path: "/job-listing",
-                element: <JobBoard/>,
-                children: [
-        
-                ]
-            },
+            
             
         ]
     },
