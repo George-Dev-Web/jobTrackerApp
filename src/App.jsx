@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Login from './pages/Login';
+
 
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -14,7 +14,7 @@ function App() {
   },[])
   return (
     <>
-      <h1>Home page</h1>
+    
     </>
   )
 }
