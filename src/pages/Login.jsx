@@ -1,14 +1,18 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-
 import { users } from "./Register"
+import { AuthContext } from "../components/AuthContextProvider"
+
+
 
 function Login(){
+    const auth = useContext(AuthContext);
     const [formData, setFormData] = useState({
         email:"",
         password:""
     })
-    const [isAuth, setIsAuth] = useState(false)
+    console.log(auth)
+    const [isAuth, setIsAuth] = useState(auth)
     const navigate = useNavigate()
 
     function handleChange(e){
@@ -25,9 +29,9 @@ function Login(){
         .then(r => r.json())
         .then(data => {
             if (data[0].email === formData.email){
-                setIsAuth(!isAuth)
+                setIsAuth(!auth)
                 sessionStorage.setItem("userId", data[0].id)
-                navigate("/")
+                navigate("/job-listing")
             }
         })
     }
