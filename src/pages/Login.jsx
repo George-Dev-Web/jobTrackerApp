@@ -1,9 +1,9 @@
-import { useState } from "react";
 import "./Login.css";
-
 import { Link, useNavigate } from "react-router-dom";
-
 import { users } from "./Register";
+import { useContext, useState } from "react"
+import { AuthContext } from "../components/AuthContextProvider"
+
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ function Login() {
       [e.target.name]: e.target.value,
     });
   }
-
+  
   function handleSubmit(e) {
     e.preventDefault();
     console.log(e);
